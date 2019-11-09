@@ -1,0 +1,18 @@
+body{
+    background-color: #6c757d26;
+}
+.content{
+    margin: 15px 20px;
+}
+.content-add {
+    margin: 15px;
+}
+.content-add button {
+    width: 150px;
+}
+.menu{
+    background-color: #007bff;
+}
+.menu a {
+    color: #ffffff;
+}
