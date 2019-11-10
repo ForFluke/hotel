@@ -23,15 +23,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.php">Hotel </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Admin</a>
-            </li>
-            <li class="nav-item d-lg-none d-md-none d-sm-block">
-                <a class="nav-link" href="#">Logout</a>
-            </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.php">Hotel </a>
+                </li>
+                <li class="nav-item d-lg-none d-md-none d-sm-block">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
             </ul>
         </div>
         <div class="log-out d-lg-block d-md-block d-sm-none  d-none ">

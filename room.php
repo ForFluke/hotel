@@ -6,12 +6,12 @@
             <div class="content-add" >
                 <div class="row" >
                     <div class="col-lg-12 col-md-12  col-sm-12 header-text">
-                        <span class=""> Manage Hotel</span>
+                        <span class=""> Manage Room </span>
                     </div>
                 </div>
                 <div class="row" >
                     <div class="col-lg-12 col-md-12  col-sm-12 ">
-                        <a href="add_hotel.php" class="btn btn-primary">Add Hotel</a> 
+                        <a href="add_hotel.php" class="btn btn-primary">Add Room</a> 
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                     <tbody>
                         <?php 	
                             $i = 1;
-                            $sql = "SELECT * FROM hotel" ;
+                            $sql = "SELECT * FROM room_type WHERE hotel_id = '{@$_GET['hotel_id]}' " ;
                             $rs = $mysqli->query($sql);
                             $items = array();
                             while($hotel = $rs->fetch_assoc()){
@@ -44,7 +44,7 @@
                                         <?php echo $hotel['picture']; ?>
                                     </a> 
                                 </td>
-                                <td scope="col"><a href="room.php?hotel_id=<?php echo $hotel['hotel_id']; ?>" >Room Detail </a> </td>
+                                <td scope="col"><a href="#" target="_blank">Room Detail </a> </td>
                                 <td>
                                     <a href="add_hotel.php?hotel_id=<?php echo $hotel['hotel_id']; ?>" ><i class="fas fa-edit"></i></a> | <a href="hotel_controller.php?action=del&hotel_id=<?php echo $hotel['hotel_id']; ?>"onclick="return confirm('Delete Hotel Name <?php echo  $hotel['hotel_name'] ?>');" ><i class="far fa-trash-alt"></i> </a> 
                                 </td>
