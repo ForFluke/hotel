@@ -39,12 +39,12 @@
                                 <td><?php echo $hotel['hotel_name']; ?></td>
                                 <td><?php echo $hotel['hotel_description']; ?></td>
                                 <td>
-                                    <a href="#" target="_blank">
+                                    <a href="uploads/<?php echo $hotel['picture']; ?>" target="_blank">
                                         <?php echo $hotel['picture']; ?>
                                     </a> 
                                 </td>
                                 <td>
-                                    <a href="#" ><i class="fas fa-edit"></i></a> | <a href="#" ><i class="far fa-trash-alt"></i> </a> 
+                                    <a href="add_hotel.php?hotel_id=<?php echo $hotel['hotel_id']; ?>" ><i class="fas fa-edit"></i></a> | <a href="hotel_controller.php?action=del&hotel_id=<?php echo $hotel['hotel_id']; ?>"onclick="return confirm('Delete Hotel Name <?php echo  $hotel['hotel_name'] ?>');" ><i class="far fa-trash-alt"></i> </a> 
                                 </td>
                             </tr>
                         <?php   
