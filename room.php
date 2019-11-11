@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <?php include 'header.php'; ?>
+    <?php include 'header.php'; 
+    $hotel_name = '';
+    if(!empty($_GET['hotel_id'])){
+        $sql = "SELECT * FROM hotel WHERE hotel_id = '{$_GET['hotel_id']}' " ;
+        $rs = $mysqli->query($sql);
+        $detail = $rs->fetch_assoc();
+        $hotel_name = 'Hotel '.$detail['hotel_name'];
+    }
+    ?>
     <body>
         <div class="content" >
             <div class="content-add" >
                 <div class="row" >
                     <div class="col-lg-12 col-md-12  col-sm-12 header-text">
-                        <span class=""> Manage Room </span>
+                        <span class=""> Manage Room <?php echo $hotel_name; ?> </span>
                     </div>
                 </div>
                 <div class="row" >
                     <div class="col-lg-12 col-md-12  col-sm-12 ">
-                        <a href="add_room.php" class="btn btn-primary">Add Room</a> 
+                        <a href="add_room.php?hotel_id=<?php echo $_GET['hotel_id']; ?>" class="btn btn-primary">Add Room</a> 
                     </div>
                 </div>
             </div>

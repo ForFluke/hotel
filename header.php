@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Hotel </a>
+                    <!-- <a class="nav-link" href="index.php">Hotel </a> -->
                 </li>
                 <li class="nav-item d-lg-none d-md-none d-sm-block">
                     <a class="nav-link" href="#">Logout</a>

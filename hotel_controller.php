@@ -39,6 +39,7 @@
         if($_GET['action'] == 'del'){
             $sql = "DELETE FROM hotel WHERE hotel_id = {$hotel_id} " ;
             $mysqli->query($sql);
+            
             $sql = "DELETE FROM  room_type WHERE hotel_id = {$hotel_id}  " ;
             $mysqli->query($sql);
         }

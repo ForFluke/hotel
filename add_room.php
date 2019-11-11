@@ -31,7 +31,9 @@
                                     $items = array();
                                     while($hotel = $rs->fetch_assoc()){
                                         $select = '';
-                                        if($hotel['hotel_id'] == $room_type['hotel_id']){
+                                        if( $hotel['hotel_id'] == $room_type['hotel_id']){
+                                            $select = 'selected';
+                                        }else if( $hotel['hotel_id'] == $_GET['hotel_id']){
                                             $select = 'selected';
                                         }
                                 ?>
@@ -43,6 +45,7 @@
                         </div>
                     </div>
                     <div class="form-group">
+                     <label for="hotel_name" class="col-sm-3 control-label">Room Size</label>
                         <div class="col-sm-10">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="room_size" id="room_size_l" value="L" <?php echo @($room_type['room_size'] == 'L')?  'checked' : ''; ?>>
